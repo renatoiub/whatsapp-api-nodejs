@@ -19,6 +19,18 @@ exports.getStatus = async (req, res) => {
     )
     return res.status(201).json({ error: false, data: data })
 }
+exports.contatos = async (req, res) => {
+    const data = await WhatsAppInstances[req.query.key]?.contatos(
+        req.query.id
+    )
+    return res.status(201).json({ error: false, data: data })
+}
+exports.chats = async (req, res) => {
+    const data = await WhatsAppInstances[req.query.key]?.chats(
+        req.query.id
+    )
+    return res.status(201).json({ error: false, data: data })
+}
 
 exports.blockUser = async (req, res) => {
     const data = await WhatsAppInstances[req.query.key]?.blockUnblock(

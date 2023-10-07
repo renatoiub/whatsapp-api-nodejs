@@ -9,6 +9,8 @@ router.route('/onwhatsapp').get(keyVerify, loginVerify, controller.onWhatsapp)
 router.route('/downProfile').get(keyVerify, loginVerify, controller.downProfile)
 router.route('/getStatus').get(keyVerify, loginVerify, controller.getStatus)
 router.route('/blockUser').get(keyVerify, loginVerify, controller.blockUser)
+router.route('/contatos').get(keyVerify, loginVerify, controller.contatos)
+router.route('/chats').get(keyVerify, loginVerify, controller.chats)
 router
     .route('/updateProfilePicture')
     .post(keyVerify, loginVerify, controller.updateProfilePicture)

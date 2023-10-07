@@ -10,6 +10,7 @@ const RESTORE_SESSIONS_ON_START_UP = !!(
     process.env.RESTORE_SESSIONS_ON_START_UP === 'true'
 )
 
+const IGNORE_GROUPS = process.env.IGNORE_GROUPS
 const APP_URL = process.env.APP_URL || false
 
 const LOG_LEVEL = process.env.LOG_LEVEL
@@ -74,5 +75,7 @@ module.exports = {
     webhookBase64: WEBHOOK_BASE64,
     protectRoutes: PROTECT_ROUTES,
     markMessagesRead: MARK_MESSAGES_READ,
-    webhookAllowedEvents: WEBHOOK_ALLOWED_EVENTS
+    webhookAllowedEvents: WEBHOOK_ALLOWED_EVENTS,
+    IGNORE_GROUPS: IGNORE_GROUPS,
+
 }
